@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Gallery{% endblock title %}
+{% block content %}
+    <h1>Gallery</h1>
+    <div style="display:flex'gap:rem1">
+    {% for img in images  %}
+        <figure>
+            <img src="{% static 'img/' %}{{ img }} " alt=" {{ img }}" srcset="" width="200">
+            <figcaption>{{ img }} </figcaption>
+        </figure>
+    {% endfor %}
+{% endblock content %}
+
